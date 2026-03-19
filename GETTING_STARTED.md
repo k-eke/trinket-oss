@@ -27,21 +27,13 @@ Wait for the services to start. You'll see `Server started on port:` when ready.
 
 Open **http://localhost:3000** in your browser.
 
-## Vendor Dependencies
+## Frontend Components
 
-Trinket requires several vendor libraries that aren't available via npm. These are downloaded automatically when you run `npm install` (via the postinstall script).
-
-If you need to set up vendor files manually:
-
-```bash
-npm run setup-vendor
-```
-
-This script:
-1. Downloads libraries from CDNs (Ace Editor, JSZip, FileSaver, etc.) to `public/vendor/`
-2. Clones the [Skulpt Python interpreter](https://github.com/trinketapp/skulpt-dist) to `public/components/skulpt/`
+Trinket requires frontend libraries (Ace Editor, Skulpt, etc.) that are distributed separately from the main repository. These are packaged in `public-components.tgz` and downloaded automatically during the Docker build from GitHub releases.
 
 **Skulpt** is the Python-to-JavaScript compiler that powers the Python code execution in the browser. Trinket maintains a forked version with additional features.
+
+For local development, Docker handles everything automatically.
 
 ## Development
 

@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block body_data -%}
-data-systemjs-import="{{ '/js/vendor/noVNC-dist/lib/rfb.js' | cachePrefix }}"
+data-systemjs-import="{{ '/components/noVNC-dist/lib/rfb.js' | cachePrefix }}"
 {%- endblock %}
 
 {% block toolbar_options %}
@@ -132,7 +132,7 @@ data-systemjs-import="{{ '/js/vendor/noVNC-dist/lib/rfb.js' | cachePrefix }}"
 
   {{ component('jquery-ui', 'jquery-ui.min.js') | safe }}
   <script src="{{ '/components/webrtc-adapter/release/adapter.js' | cachePrefix }}"></script>
-  <script src="{{ '/js/vendor/janus/0.4.2/janus.js' | cachePrefix }}"></script>
+  <script src="{{ '/components/janus/0.4.2/janus.js' | cachePrefix }}"></script>
 
   {% set js = extra_js.concat([
        '/components/jq-console/jqconsole.min.js',

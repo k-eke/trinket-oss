@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get -y autoclean
 
 # Install global tools
-RUN npm install -g pm2@5 grunt-cli@1.4.0
+RUN npm install -g pm2@5
 
 RUN groupadd -r trinket && \
     useradd -r -g trinket -m -c "trinket user" trinket
