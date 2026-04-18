@@ -1,11 +1,15 @@
 app:
   analytics:
-    secret:
+    secret: !env ANALYTICS_SECRET
   url:
-    protocol:
-    hostname:
+    protocol: https
+    hostname: !env APP_HOSTNAME
+
 db:
   mongo:
-    host:
-    user:
-    pass:
+    # Railway provides a full URI, so we usually map it to a single string
+    uri: !env MONGODB_URL
+    # If the app specifically requires split host/user/pass:
+    host: !env MONGO_HOST
+    user: !env MONGO_USER
+    pass: !env MONGO_PASSWORD
