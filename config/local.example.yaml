@@ -16,7 +16,7 @@ app:
     session:
       cookieOptions:
         # CHANGE THIS - must be at least 32 characters
-        password: '272ghhjsabda!3uh2298374y1h2b387423t4gdasbaio7y16!@2jr483yh'
+        password: ''
         domain: ''
         isSecure: false  # Set true in production with HTTPS
 
